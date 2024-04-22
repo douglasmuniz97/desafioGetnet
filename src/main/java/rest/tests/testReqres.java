@@ -14,9 +14,9 @@ public class testReqres extends BaseTest {
     @Test
     public void test01_ListUsers(){
         given()
-        .when()
+                .when()
                 .get("/users?page=2")
-        .then()
+                .then()
                 .statusCode(200)
                 .body("page", Matchers.is(2))
                 .body("per_page", Matchers.is(6))
@@ -190,7 +190,6 @@ public class testReqres extends BaseTest {
     @Test
     public void test15_DelayedResponse(){
         given()
-
                 .when()
                 .get("/users?delay=3")
                 .then()
